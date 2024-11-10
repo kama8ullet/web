@@ -1,0 +1,139 @@
+@import url(./normalize.css);
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page {
+  min-width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 160%;
+}
+
+.wrapper {
+  position: relative;
+  min-width: 320px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header, .main, .footer {
+  margin: 0 200px;
+}
+
+.section__title {
+  color: white;
+  background-color: #000;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.header__title {
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.navigate {
+  grid-area: nav;
+  background-color: #000;
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.navigate__list {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+.navigate__point a {
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.25s linear;
+}
+
+.navigate__point a:hover {
+  opacity: 0.5;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.picture {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.footer {
+  background-color: #000;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: white;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.footer__copyright {
+  margin: 0;
+}
+
+@media screen and (max-width: 1279px) {
+  .header {
+    grid-template-rows: 80px 1fr;
+  }
+
+  .navigate__list {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header, .main, .footer {
+    margin: 0 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header, .main, .footer {
+    margin: 0 50px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .header__title {
+    font-size: 25px;
+  }
+
+  .navigate {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .header, .main, .footer {
+    margin: 0 25px;
+  }
+}
